@@ -19,8 +19,23 @@ functionJS.isNegativeOrPositiveNumber(1)();	// 整数
 functionJS.isNegativeOrPositiveNumber(-1)();　// 負数
 */
 
-/*####  03 - function  ####*/
-const async = require("./public/js/04-async.js");
-// async.setTimeOut;
+/*####  04 - async  ####*/
+/*const async = require("./public/js/04-async.js");
+async.setTimeOut;
 async.readFileByBatDongBo;
 async.readFileByDongBo;
+*/
+
+/*####  05 - callback  ####*/
+const callbackFunc = require("./public/js/05-callback.js");
+console.log("Diện tích hình thang : " + callbackFunc.dientichHinhThang(2, 3, 2));
+
+callbackFunc.phepCong(4, "5", (err, result) => {
+	if (err) return console.log( "ERROR : " + err );
+	console.log(result);
+});
+
+callbackFunc.phepCongVietGonHon(4, "5", (err, result) => {
+	if ( err ) return console.log( err );
+	console.log(result); 
+})
