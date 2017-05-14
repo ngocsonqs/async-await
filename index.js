@@ -7,12 +7,20 @@ letVar.funcVar();
 */
 
 /*####  02 - arrFunc  ####*/
-const arrowFunc = require("./public/js/02-arrow-func.js");
+/*const arrowFunc = require("./public/js/02-arrow-func.js");
 arrowFunc.printAll([4, 5, 6, 3, 7, 1]);
 console.log(arrowFunc.createNewArrFromOriginalArrCase01([4, 5, 6, 3, 7, 1]));
 console.log(arrowFunc.createNewArrFromOriginalArrCase02);
+*/
 
 /*####  03 - function  ####*/
-const functionJS = require("./public/js/03-function.js");
+/*const functionJS = require("./public/js/03-function.js");
 functionJS.isNegativeOrPositiveNumber(1)();	// 整数
 functionJS.isNegativeOrPositiveNumber(-1)();　// 負数
+*/
+
+/*####  03 - function  ####*/
+const async = require("./public/js/04-async.js");
+// async.setTimeOut;
+async.readFileByBatDongBo;
+async.readFileByDongBo;
