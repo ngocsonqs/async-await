@@ -12,7 +12,16 @@ function printAll( arr ) {
 	arr.forEach( elem => console.log(elem));
 }
 
+/**
+ * 特定配列から新しい配列を作成する	
+ * @param  {配列 : any} arr 特定配列
+ * @return {配列 : any}     新しい配列
+ */
 function createNewArrFromOriginalArrCase01( arr ) {
+	/*
+		+ Nếu hàm chỉ có 1 dòng xử lý -> bỏ dấu {}
+		+ Nếu hàm chỉ có 1 câu lệnh return -> bỏ luôn chữ return
+	 */
 	return arr.map( elem => elem * 2);
 }
 
