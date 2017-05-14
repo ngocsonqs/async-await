@@ -1,3 +1,4 @@
+'use strict';
 /*
 	01. let - var
 		■　let : 
@@ -14,7 +15,7 @@ function funcLet() {
 	}
 	console.log(x);
 }
-
+// KQ : 1, 2, 1
 
 function funcVar() {
 	var x = 1;
@@ -25,6 +26,7 @@ function funcVar() {
 	}
 	console.log(x);
 }
+// KQ : 1, 2, 2
 
 module.exports.funcLet = funcLet;
 module.exports.funcVar = funcVar;
