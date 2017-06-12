@@ -27,7 +27,7 @@ async.readFileByDongBo;
 */
 
 /*####  05 - callback  ####*/
-const callbackFunc = require("./public/js/05-callback.js");
+/*const callbackFunc = require("./public/js/05-callback.js");
 console.log("Diện tích hình thang : " + callbackFunc.dientichHinhThang(2, 3, 2));
 
 callbackFunc.phepCong(4, "5", (err, result) => {
@@ -37,5 +37,12 @@ callbackFunc.phepCong(4, "5", (err, result) => {
 
 callbackFunc.phepCongVietGonHon(4, "5", (err, result) => {
 	if ( err ) return console.log( err );
-	console.log(result); 
-})
+	console.log(result);
+})*/
+
+/*###### 06 - tính diện tích hình thang - callback hell ######*/
+const callbackSample = require("./public/js/06-callback-sample.js");
+callbackSample.tinhDientichHinhThang(2, 3, 2, (err, result) => {
+    if ( err ) return console.log( err + " ");
+    console.log("Diện tích hình thang : ", result);
+});

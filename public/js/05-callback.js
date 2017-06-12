@@ -22,7 +22,7 @@ let add = ( num01, num02, callback) => {
  * @param  {num01 : number}   num01    sô thứ 1
  * @param  {num02 : number}   num02    số thứ 2
  * @param  {Function} callback hàm xử lý khi có err or có giá trị trả về
- * @return {any}            nếu có lỗ -> trả về err, nếu có giá trị -> trả về result
+ * @return {any}            nếu có lỗi -> trả về err, nếu có giá trị -> trả về result
  */
 let addCaseRutGon = ( num01, num02, callback ) => {
 	setTimeout( () => {
