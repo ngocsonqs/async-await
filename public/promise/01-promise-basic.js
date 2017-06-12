@@ -2,3 +2,9 @@
 // ①． khởi tạo đối tượng Promise //
 ///////////////////////////////////
 let pr = new Promise( () => console.log( "Hello Promise"));
+
+
+//////////////////////////////////////////////////////
+// ②． khởi tạo đối tượng Promise　có truyền tham số //
+//////////////////////////////////////////////////////
+let pr2 = new Promise( ( resolve, reject ) => console.log("Hello Promise"));
