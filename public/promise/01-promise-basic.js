@@ -8,3 +8,12 @@ let pr = new Promise( () => console.log( "Hello Promise"));
 // ②． khởi tạo đối tượng Promise　có truyền tham số //
 //////////////////////////////////////////////////////
 let pr2 = new Promise( ( resolve, reject ) => console.log("Hello Promise"));
+
+
+//////////////////////////////////////////////////////
+// ③． ví dụ về resolve( xử lý thành công) //
+//////////////////////////////////////////////////////
+let pr3 = new Promise( (resolve, reject) => {
+    resolve("success");
+});
+pr3.then( (value) => console.log("Trạng thái ", value));
