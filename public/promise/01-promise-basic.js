@@ -1,0 +1,4 @@
+////////////////////////////////////
+// ①． khởi tạo đối tượng Promise //
+///////////////////////////////////
+let pr = new Promise( () => console.log( "Hello Promise"));
