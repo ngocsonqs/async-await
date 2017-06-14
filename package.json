@@ -16,8 +16,9 @@
     "url": "https://github.com/ngocsonqs/async-await/issues"
   },
   "homepage": "https://github.com/ngocsonqs/async-await#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "ejs": "^2.5.6",
-    "express": "^4.15.2"
+    "express": "^4.15.3"
   }
 }
