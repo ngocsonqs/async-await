@@ -57,3 +57,29 @@ readFileWithPromiseCase01
         data => console.log(data),
         err => console.log(err + "")
     );
+
+
+/**
+ * hàm đọc file viết bằng Promise - cách 2
+ * @author ngocsonqs
+ * @date    2017-06-15
+ * @version 1.0
+ * @param   {string}   targetFile đường dẫn đến file cần đọc
+ * @return  {string}              OK -> nội dung file cần đọc, ERROR -> trả về error obj
+ */
+let readFileWithPromiseCase02 = targetFile => {
+    return new Promise( (resolve, reject) => {
+        fs.readFile( targetFile, 'utf8', (err, data) => {
+            if ( err ) {
+                return reject( err );
+            }
+            return resolve(data);
+        });
+    });
+};
+// thực thi
+readFileWithPromiseCase02(TXT_FILE_PATH)
+    .then(
+        data => console.log( "Case2 : " + data),
+        errMsg => console.log(errMsg + "")
+    );
