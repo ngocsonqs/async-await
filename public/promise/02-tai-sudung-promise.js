@@ -2,6 +2,8 @@
 // ※ TÁI SỬ DỤNG PROMISE ※ //
 ///////////////////////////////////
 
+let fs = require("fs");
+
 /**
  * tính phép cộng 2 số sử dụng bất đồng bộ trong việc tái sử dụng Promise
  * @author ngocsonqs
@@ -25,3 +27,33 @@ add(2, 3)
     .then(
         result => console.log( "Kết quả của phép cộng = " , result),
         errMsg => console.log(errMsg));
+
+
+/**
+ * file text
+ * @type {String}
+ */
+const TXT_FILE_PATH = '../txt/hello.txt';
+
+/**
+ * hàm đọc file viết bằng promise
+ * @author ngocsonqs
+ * @date    2017-06-14
+ * @version 1.0
+ * @param   {obj}   (resolve, reject)       OK -> resolve, err -> reject
+ * @return  {obj}             OK -> nội dung trong file truyền vào, err -> Err Object
+ */
+let readFileWithPromiseCase01 = new Promise( (resolve, reject) => {
+    fs.readFile(TXT_FILE_PATH, 'utf8', (err, data) => {
+        if ( err ) {
+            return reject( err );
+        }
+        return resolve(data);
+    })
+});
+// thực thi
+readFileWithPromiseCase01
+    .then(
+        data => console.log(data),
+        err => console.log(err + "")
+    );
