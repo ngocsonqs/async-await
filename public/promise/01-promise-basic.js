@@ -32,3 +32,17 @@ pr4.then(
     // TRƯỜNG HỢP reject(có lỗi) thì sẽ chạy câu lệnh này
     (err) => console.log("Trạng thái ", err + "")
 );
+
+/////////////////////////////////////////////
+// ⑤.  vì promise chỉ hay sử dụng trong code bất đồng bộ,
+//      nếu code đồng bộ thì ta chỉ cần if...else là OK.
+//      nên ta sẽ thử viết 1 đoạn code bất đồng bộ như sau
+/////////////////////////////////////////////
+let pr5 = new Promise( (resolve, reject) => {
+    setTimeout( () => {
+        resolve("Success");
+    }, 2000)
+}).then(
+    successStatusMsg => console.log("STATUS : ", successStatusMsg),
+    failStatusMsg => console.log("STATUS : ", failStatusMsg)
+);
