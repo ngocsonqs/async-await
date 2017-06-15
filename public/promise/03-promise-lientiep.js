@@ -9,11 +9,6 @@ let add = ( num1, num2 ) => {
 
 // thực thi 4 + 5 + 6 = 15
 add("4", 5)
-    .then(
-        result => add(result, 6),
-        errMsg => console.log(errMsg + "")
-    )
-    .then(
-        result => console.log(result),
-        errMsg => console.log(errMsg + "")
-    )
+    .then( result => add(result, 6) )
+    .then( result => console.log(result) )
+    .catch( err => console.log( err + ""));
